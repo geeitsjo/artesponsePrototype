@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="color: #133749;" class="mainTitle">artesponse</h1>
+<% if user_signed_in? %>
+<div style="text-align: center; background-color: #e7e7e7; color: black; padding: 15px; margin-bottom: 50px;">
+  <%= link_to 'Upload New Art', new_idea_path %>
+</div>
+<% end %>
+
+<div class="gallery">
+  <% @ideas.each do |idea| %>
+  <div class="artwork">
+    <!-- <div> #<%= link_to idea, idea %> </div> -->
+    <figure>
+      <%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%>
+      <div class="sentiments">
+       <div class="sentiment">
+        Like (<%= idea.reactions.where(sentiment: "Like").count %>)
+      </div>
+      <div class="sentiment">
+        Love (<%= idea.reactions.where(sentiment: "Love").count %>)
+      </div>
+      <div class="sentiment">
+       Sad (<%= idea.reactions.where(sentiment: "Sad").count %>)
+     </div>
+     <div class="sentiment">
+      Confuse (<%= idea.reactions.where(sentiment: "Confuse").count %>)
+    </div>
+    <div class="sentiment">
+      Angry (<%= idea.reactions.where(sentiment: "Angry").count %>)
+    </div> 
+  </div>
+</figure>
+
+<div class="image_details">
+ <h4><%= link_to idea.name, idea %></h4>
+</div>
+</div>
+<% end %>
+</div>
+
+
+

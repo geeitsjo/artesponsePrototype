@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body { padding-top: 50px; }
+footer { margin-top: 100px; }
+table, td, th { vertical-align: middle; border: none; padding: 50px;}
+
+.bodyStyles{
+	background-color: white;
+// background-image: image-url("two.jpg");
+// background-position: center center;
+// 	background-repeat: no-repeat;
+// 	background-attachment: fixed;
+// 	background-size: cover;
+// 	width: 100%;
+}
+
+.uploadButtonStyle{
+	background-color: grey;
+}
+
+.navOverlay{
+	background:rgba(0,0,0,0.5);
+}
+
+.navBarStyle{
+	background-image: image-url("three.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+}
+
+.whiteText{
+	color: white;
+}
+
+.navbar-brand{
+	text-decoration: none; 
+	color:white; 
+	font-size: 30px; 
+	font-family: mainTitle; 
+	border-right: thick solid white;
+}
+
+@font-face {
+	font-family: mainTitle;
+	/*src: font-url("ChasingEmbersDemoVersion.ttf");*/
+	src: font-url('SummerScriptastic.ttf') format('truetype');
+
+}
+
+.artistStyles{
+	text-align: center;
+}
+
+.fields{
+	padding-bottom: 50px;
+}
+
+.navbar-link1{
+	color:white;
+}
